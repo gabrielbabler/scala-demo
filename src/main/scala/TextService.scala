@@ -30,7 +30,7 @@ object TextService extends App {
         limitAux -= wordLength + 1
       } else {
         sb.append("\n").append(words(i))
-        limitAux = 40 - wordLength
+        limitAux = LimitCharsPerWord - wordLength
       }
     }
     sb.toString()

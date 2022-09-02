@@ -14,7 +14,7 @@ object TextService extends App {
       sb.append(words(0))
       limitAux -= words(0).length
     } else {
-      throw new Exception("The first word exceed the valid limitAux of 40 chars")
+      throw new Exception("The first word exceed the valid limit of 40 chars")
     }
 
     for (i <- 1 until words.length) {
@@ -22,7 +22,7 @@ object TextService extends App {
 
       if(wordLength > LimitCharsPerWord) {
         println(words(i))
-        throw new Exception("The first word exceed the valid limitAux of 40 chars")
+        throw new Exception("The word exceed the valid limit of 40 chars")
       }
 
       if (wordLength + 1 <= limitAux) {
